@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #f0fdf4;
+  --foreground: #022c22;
+  --primary: #15803d; 
+  --primary-foreground: #ffffff;
+  --card: rgba(255, 255, 255, 0.7);
+  --card-foreground: #022c22;
+  --border: rgba(187, 247, 208, 0.8);
+}
+
+.dark {
+  --background: #06402B; /* Diyar Dark Green */
+  --foreground: #f8fafc;
+  --primary: #73C33A; /* Diyar Light Green */
+  --primary-foreground: #022c22;
+  --card: rgba(2, 44, 34, 0.6);
+  --card-foreground: #f8fafc;
+  --border: rgba(115, 195, 58, 0.2);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism utilities */
+@utility glass {
+  background: var(--card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+@utility glass-hover {
+  @apply hover:bg-black/5 hover:border-black/10 dark:hover:bg-white/10 dark:hover:border-white/20 transition-all duration-300;
+}

@@ -1,0 +1,92 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Vacancy {
+  id          String      @id @default(cuid())
+  title       String
+  department  String?
+  type        String      @default("Full-time")
+  location    String      @default("Nókis")
+  salary      String?
+  description String?
+  isActive    Boolean     @default(true)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  candidates  Candidate[]
+}
+
+model Candidate {
+  id           String    @id @default(cuid())
+  fullName     String
+  phone        String?
+  username     String?
+  birthDate    String?
+  university   String?
+  major        String?
+  gradYear     String?
+  prevCompany  String?
+  prevRole     String?
+  achievements String?
+  skills       String?
+  portfolioUrl String?
+  resumeUrl    String?   // Added for Resume upload
+  status        String    @default("Arza qaldırdı") 
+  aiScore       Int?
+  chatId        String?   // Added for Telegram bot notifications
+  interviewChat String?   // Added to store AI chat logs
+  appliedAt     DateTime  @default(now())
+  
+  vacancyId    String?
+  vacancy      Vacancy?  @relation(fields: [vacancyId], references: [id])
+}
+
+model CompanyInfo {
+  id          String    @id @default(cuid())
+  title       String
+  description String
+  stats       String?   // JSON string of stats e.g. [{"label": "Employees", "value": "50+"}]
+  updatedAt   DateTime  @updatedAt
+}
+
+model TeamMember {
+  id        String    @id @default(cuid())
+  name      String
+  role      String
+  imageUrl  String?
+  order     Int       @default(0)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model FAQ {
+  id        String    @id @default(cuid())
+  question  String
+  answer    String
+  order     Int       @default(0)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model OnboardingTask {
+  id        String    @id @default(cuid())
+  title     String
+  order     Int       @default(0)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model SOP {
+  id        String    @id @default(cuid())
+  title     String
+  content   String
+  order     Int       @default(0)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
