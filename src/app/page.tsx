@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+import Image from "next/image";
+
 export default function Home() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -27,21 +29,36 @@ export default function Home() {
   };
 
   return (
-    <main className="flex-1 w-full max-w-md mx-auto p-4 flex flex-col pt-8 pb-24">
-
+    <main className="flex-1 w-full max-w-md mx-auto p-4 flex flex-col pt-6 pb-24">
 
       {/* Hero Section */}
       <motion.div 
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        className="text-center mb-10 relative"
+        className="text-center mb-8 relative flex flex-col items-center"
       >
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-primary/30 rounded-full blur-3xl -z-10" />
-        <h1 className="text-4xl font-extrabold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-primary">
-          Diyar Market Komandasına Qosıl
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-primary/25 rounded-full blur-3xl -z-10" />
+        
+        {/* Real HR Official Brand Logo */}
+        <div className="relative mb-4 w-24 h-24 rounded-3xl overflow-hidden shadow-2xl shadow-yellow-500/25 border-2 border-primary/50 p-1 bg-yellow-400">
+          <Image 
+            src="/real-logo.jpg" 
+            alt="Real HR Logo" 
+            width={96} 
+            height={96} 
+            className="w-full h-full object-cover rounded-2xl"
+            priority
+          />
+        </div>
+
+        <h1 className="text-4xl font-black mb-1 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 font-serif tracking-tight">
+          REAL HR
         </h1>
-        <p className="text-lg text-slate-400 font-medium">
-          Dúkanımızdıń bir bólegi bol!
+        <p className="text-xs font-bold tracking-[0.25em] text-primary uppercase mb-2">
+          REAL EDUCATION
+        </p>
+        <p className="text-sm text-slate-300 font-medium max-w-xs">
+          Real Education komandasına qosıl hám keleshegińdi biz benen birge qur!
         </p>
       </motion.div>
 
@@ -55,16 +72,16 @@ export default function Home() {
         {/* Primary Action */}
         <motion.div variants={itemVariants}>
           <Link href="/application" className="block">
-            <div className="relative overflow-hidden bg-primary rounded-2xl p-5 flex items-center justify-between group">
-              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="relative overflow-hidden bg-primary text-black rounded-2xl p-5 flex items-center justify-between group shadow-xl shadow-yellow-500/20 hover:shadow-yellow-500/35 transition-all">
+              <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative z-10 flex flex-col">
-                <span className="text-white/80 text-sm font-medium mb-1 flex items-center gap-1">
-                  <Sparkles size={14} /> Óz jolıńdı basla
+                <span className="text-black/80 text-xs font-bold mb-1 flex items-center gap-1 uppercase tracking-wider">
+                  <Sparkles size={14} className="text-black" /> Óz jolıńdı basla
                 </span>
-                <span className="text-white text-xl font-bold">Arza tapsırıw</span>
+                <span className="text-black text-xl font-black">Arza tapsırıw</span>
               </div>
-              <div className="relative z-10 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md">
-                <ChevronRight className="text-white" size={24} />
+              <div className="relative z-10 w-12 h-12 bg-black/10 rounded-full flex items-center justify-center backdrop-blur-md group-hover:scale-110 transition-transform">
+                <ChevronRight className="text-black" size={24} />
               </div>
             </div>
           </Link>
@@ -81,7 +98,7 @@ export default function Home() {
           <ActionCard 
             href="/company" 
             icon={<Building2 size={24} className="text-primary" />}
-            title="Dúkan haqqında"
+            title="Oray haqqında"
             variants={itemVariants}
           />
           <ActionCard 

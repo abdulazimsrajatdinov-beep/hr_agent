@@ -58,7 +58,7 @@ export default function VacancyDetail({ params }: { params: Promise<{ id: string
       >
         <div>
           <h1 className="text-3xl font-extrabold mb-2">{vacancy?.title || "Satıwshı-konsultant"}</h1>
-          <p className="text-primary font-medium text-lg">{vacancy?.department || "Diyar Market bólimi"}</p>
+          <p className="text-primary font-medium text-lg">{vacancy?.department || "Real Education bólimi"}</p>
         </div>
 
         <div className="glass rounded-2xl p-5 grid grid-cols-2 gap-4">
@@ -115,7 +115,7 @@ export default function VacancyDetail({ params }: { params: Promise<{ id: string
             </ul>
           ) : (
             <p className="text-slate-300 text-sm leading-relaxed">
-              Diyar Market komandasında juwapkershilikli, mijazlar menen jaqsı qarım-qatnasta bola alatuǵın hám óz isine sadıq xızmetkerlerdi kútemiz.
+              Real Education komandasında juwapkershilikli, mijazlar menen jaqsı qarım-qatnasta bola alatuǵın hám óz isine sadıq xızmetkerlerdi kútemiz.
             </p>
           )}
         </div>
@@ -124,7 +124,7 @@ export default function VacancyDetail({ params }: { params: Promise<{ id: string
       {/* Floating Apply Button */}
       <div className="fixed bottom-6 left-0 right-0 px-4 flex justify-center w-full max-w-md mx-auto pointer-events-none">
         <Link href={`/application?vacancyId=${resolvedParams.id}`} className="w-full pointer-events-auto">
-          <button className="w-full bg-primary hover:bg-green-700 text-white shadow-xl shadow-green-500/20 py-4 rounded-2xl font-bold text-lg transition-all active:scale-95">
+          <button className="w-full bg-primary hover:bg-yellow-400 text-black shadow-xl shadow-yellow-500/20 py-4 rounded-2xl font-bold text-lg transition-all active:scale-95">
             Arza tapsırıw
           </button>
         </Link>

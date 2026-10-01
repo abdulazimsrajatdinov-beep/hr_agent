@@ -25,7 +25,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       {/* Sidebar for Desktop */}
       <aside className="hidden md:flex w-64 flex-col glass border-r border-white/10 relative z-20">
         <div className="p-6 border-b border-white/10">
-          <h2 className="text-xl font-bold text-primary">DIYAR MARKET</h2>
+          <div className="flex items-center gap-3 mb-1"><div className="w-9 h-9 rounded-xl overflow-hidden bg-yellow-400 p-0.5 border border-primary/40 shrink-0"><img src="/real-logo.jpg" alt="Real HR" className="w-full h-full object-cover rounded-lg" /></div><h2 className="text-lg font-black text-primary leading-tight">REAL HR</h2></div>
           <p className="text-xs text-slate-400">AI Recruitment System</p>
         </div>
         <nav className="flex-1 p-4 space-y-2">

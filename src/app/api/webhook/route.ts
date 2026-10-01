@@ -4,7 +4,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const token = process.env.TELEGRAM_BOT_TOKEN;
-    const webAppUrl = 'https://texnopos-hr-ai.vercel.app';
+    const webAppUrl = process.env.WEB_APP_URL || 'https://real-hr-ai.vercel.app';
 
     if (!token) {
       return NextResponse.json({ error: 'TELEGRAM_BOT_TOKEN is missing' }, { status: 500 });
@@ -23,7 +23,7 @@ export async function POST(req: Request) {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             chat_id: chatId,
-            text: "Sálem! Diyar Market AI Recruitment platformasına xosh keldińiz.\n\nTómendegi túymeni basıp, vakansiyalar menen tanısıń hám arza qaldırıń:",
+            text: "Sálem! Real HR — Real Education AI Recruitment platformasına xosh keldińiz.\n\nTómendegi túymeni basıp, vakansiyalar menen tanısıń hám arza qaldırıń:",
             reply_markup: {
               inline_keyboard: [
                 [{ text: "🚀 Arza tapsırıw", web_app: { url: webAppUrl } }]

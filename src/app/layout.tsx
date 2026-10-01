@@ -19,12 +19,12 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
-  themeColor: "#06402B",
+  themeColor: "#FFCE00",
 };
 
 export const metadata: Metadata = {
-  title: "Diyar Market HR AI",
-  description: "Diyar Market AI Recruitment System",
+  title: "Real HR — Real Education AI HR Platforması",
+  description: "Real Education AI Recruitment & Onboarding System",
 };
 
 export default function RootLayout({
@@ -37,7 +37,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground dark:bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] dark:from-green-900 dark:via-[#06402B] dark:to-[#021e14]">
+      <body className="min-h-full flex flex-col bg-background text-foreground dark:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] dark:from-amber-950/30 dark:via-[#09090b] dark:to-[#040405]">
         <Script src="https://telegram.org/js/telegram-web-app.js" strategy="beforeInteractive" />
         <TelegramInit />
         {children}

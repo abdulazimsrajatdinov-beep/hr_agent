@@ -13,23 +13,23 @@
 }
 
 :root {
-  --background: #f0fdf4;
-  --foreground: #022c22;
-  --primary: #15803d; 
-  --primary-foreground: #ffffff;
-  --card: rgba(255, 255, 255, 0.7);
-  --card-foreground: #022c22;
-  --border: rgba(187, 247, 208, 0.8);
+  --background: #fffdf5;
+  --foreground: #09090b;
+  --primary: #eab308; 
+  --primary-foreground: #000000;
+  --card: rgba(255, 255, 255, 0.85);
+  --card-foreground: #09090b;
+  --border: rgba(234, 179, 8, 0.25);
 }
 
 .dark {
-  --background: #06402B; /* Diyar Dark Green */
+  --background: #09090b; /* Real Modern Matte Black */
   --foreground: #f8fafc;
-  --primary: #73C33A; /* Diyar Light Green */
-  --primary-foreground: #022c22;
-  --card: rgba(2, 44, 34, 0.6);
+  --primary: #FFCE00; /* Real Education Vibrant Gold/Yellow */
+  --primary-foreground: #000000;
+  --card: rgba(24, 24, 27, 0.75);
   --card-foreground: #f8fafc;
-  --border: rgba(115, 195, 58, 0.2);
+  --border: rgba(255, 206, 0, 0.2);
 }
 
 body {

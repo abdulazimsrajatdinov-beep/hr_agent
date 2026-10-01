@@ -81,9 +81,9 @@ export async function PUT(request: Request) {
     if (status === "Qabıllandı" && candidate.chatId) {
       const token = process.env.TELEGRAM_BOT_TOKEN;
       if (token) {
-        const baseUrl = process.env.WEB_APP_URL || 'https://texnopos-hr-ai.vercel.app';
+        const baseUrl = process.env.WEB_APP_URL || 'https://real-hr-ai.vercel.app';
         const onboardingUrl = `${baseUrl}/onboarding/${candidate.id}`;
-        const message = `🎉 Qutlıqlaymız, ${candidate.fullName}!\n\nSiz Diyar Market komandasına qabıllandıńız!\n\nTómendegi silteme arqalı jeke Onboarding (Adaptaciya) portalińizge kiriń hám wazıypalar menen tanısıń:\n\n👉 <a href="${onboardingUrl}">Onboarding Portalǵa Kiriw</a>`;
+        const message = `🎉 Qutlıqlaymız, ${candidate.fullName}!\n\nSiz Real HR (Real Education) komandasına qabıllandıńız!\n\nTómendegi silteme arqalı jeke Onboarding (Adaptaciya) portalińizge kiriń hám wazıypalar menen tanısıń:\n\n👉 <a href="${onboardingUrl}">Onboarding Portalǵa Kiriw</a>`;
         
         await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
           method: 'POST',

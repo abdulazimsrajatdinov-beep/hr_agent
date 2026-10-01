@@ -49,15 +49,22 @@ export default function CompanyPage() {
           {/* Logo & Intro */}
           <div className="glass rounded-3xl p-6 flex flex-col items-center text-center gap-4 border border-white/10 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-green-500/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-amber-500/15 rounded-full blur-3xl" />
             
-            <div className="w-24 h-24 rounded-2xl bg-primary/20 p-4 flex items-center justify-center relative z-10 border border-primary/30 text-3xl font-black text-primary">
-              DM
+            <div className="w-24 h-24 rounded-3xl overflow-hidden p-1 bg-yellow-400 border border-primary/40 relative z-10 shadow-lg shadow-yellow-500/20">
+              <Image 
+                src="/real-logo.jpg" 
+                alt="Real Education Logo" 
+                width={96} 
+                height={96} 
+                className="w-full h-full object-cover rounded-2xl" 
+              />
             </div>
             <div className="relative z-10">
-              <h2 className="text-2xl font-bold mb-2">{info?.title || "Diyar Market"}</h2>
-              <p className="text-sm text-slate-400 leading-relaxed">
-                {info?.description || "Diyar Market — xalqımızǵa sapalı azıq-awqat hám kúndelikli tutınıw malların qolaylı bahalarda usınıwshı zamanagóy supermarketler tarmaǵı."}
+              <h2 className="text-2xl font-bold mb-1 text-white">{info?.title || "Real Education"}</h2>
+              <p className="text-xs text-primary font-semibold tracking-wider uppercase mb-3">Real HR Platforması</p>
+              <p className="text-sm text-slate-300 leading-relaxed">
+                {info?.description || "Real Education — xalqımızǵa hám jaslarımızǵa sapalı, innovaciyalıq tálim, shet tilleri, IT hám kásip-óner baǵdarların úyretetuǵın zamanagóy tálim orayı."}
               </p>
             </div>
           </div>
@@ -84,7 +91,7 @@ export default function CompanyPage() {
               </div>
               <div>
                 <p className="font-medium text-sm mb-1">Mánzil</p>
-                <p className="text-xs text-slate-400 leading-relaxed">Nókis qalası, Diyar Market bas ofisi</p>
+                <p className="text-xs text-slate-400 leading-relaxed">Nókis qalası, Real Education bas ofisi</p>
               </div>
             </div>
             
@@ -94,7 +101,7 @@ export default function CompanyPage() {
               </div>
               <div>
                 <p className="font-medium text-sm mb-1">Sociallıq tarmaqlar</p>
-                <span className="text-xs text-primary block">@diyarmarket</span>
+                <span className="text-xs text-primary block">@realeducation_uz</span>
               </div>
             </div>
           </div>

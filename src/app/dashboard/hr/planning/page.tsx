@@ -44,10 +44,10 @@ export default function HRPlanningPage() {
       <div>
         <h1 className="text-3xl font-bold text-white flex items-center gap-3">
           <Calculator className="text-primary" size={32} />
-          Dúkan Kadrların Rejelestiriw
+          Oray Kadrların Rejelestiriw
         </h1>
         <p className="text-slate-400 mt-2">
-          Diyar Market filiallarında kúnlik mijazlar hám dúkan maydanınan kelip shıǵıp, anıq neshe kadr kerek ekenligin esaplaw.
+          Real Education filiallarında kúnlik oqıwshılar hám oray auditoriyalarınan kelip shıǵıp, anıq neshe kadr kerek ekenligin esaplaw.
         </p>
       </div>
 
@@ -79,10 +79,10 @@ export default function HRPlanningPage() {
           </div>
 
           <div className="glass p-6 rounded-3xl border border-white/10">
-            <h2 className="text-xl font-bold mb-6 text-primary flex items-center gap-2"><Building2 size={20}/> Dúkan Infrastrukturası</h2>
+            <h2 className="text-xl font-bold mb-6 text-primary flex items-center gap-2"><Building2 size={20}/> Oray Infrastrukturası</h2>
             <div className="flex flex-col gap-4">
               <div>
-                <label className="text-xs text-slate-400 mb-1 block">Dúkan maydanı (kv.m)</label>
+                <label className="text-xs text-slate-400 mb-1 block">Oray maydanı (kv.m)</label>
                 <input 
                   type="number" 
                   value={marketArea} 
@@ -169,7 +169,7 @@ export default function HRPlanningPage() {
                      Kassa apparatları {calculated.hasEnoughRegisters ? "Jeterli" : "Jetpeydi!"}
                    </h4>
                    <p className="text-sm text-slate-300 mt-1">
-                     Házirgi dúkanda jami <strong>{totalRegisters}</strong> kassa apparatı bar. 
+                     Házirgi filialda jami <strong>{totalRegisters}</strong> kassa apparatı bar. 
                      Sizge bolsa bir smenada <strong>{calculated.requiredCashiersPerShift}</strong> kassa hám kassir islesiwi kerek. 
                    </p>
                    

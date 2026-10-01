@@ -39,11 +39,11 @@ export async function POST(req: Request) {
 
     const tasksText = tasks.length > 0 ? tasks.map((t, i) => `${i + 1}. ${t.title}`).join('\n') : 'Kórsetilmegen';
     const sopsText = sops.length > 0 ? sops.map(s => `- ${s.title}: ${s.content}`).join('\n') : 'Kórsetilmegen';
-    const companyText = companyList[0] ? `${companyList[0].title}: ${companyList[0].description}` : 'Diyar Market — azıq-awqat hám kúndelikli tutınıw malları supermarketler tarmaǵı.';
+    const companyText = companyList[0] ? `${companyList[0].title}: ${companyList[0].description}` : 'Real Education — zamanagóy tálim, shet tilleri, IT hám kásip-óner orayı.';
 
     const systemPrompt = `
-      Sen Diyar Market supermarketler tarmaǵınıń "Onboarding (Adaptaciya)" boyınsha professional HR AI Asistentisań.
-      Jumısqa jańa qabıl etilgen xızmetker menen sáwbetlesip atırsań.
+      Sen Real HR — Real Education zamanagóy tálim orayınıń "Onboarding (Adaptaciya)" boyınsha professional HR AI Asistentisań.
+      Jumısqa jańa qabıl etilgen komanda aǵzası (oqıtıwshı, administrator yamasa mánedjer) menen sáwbetlesip atırsań.
       Xızmetker maǵlıwmatı: ${candidateContext}
       Kompaniya haqqında: ${companyText}
       Birinshi háptelik wazıypalar:
@@ -52,8 +52,8 @@ export async function POST(req: Request) {
       ${sopsText}
       
       Seniń wazıypań:
-      1. Xızmetkerdi Diyar Market komandasına qabıllanǵanı menen qızǵın qutlıqlaw hám onıń sorawlarına juwap beriw.
-      2. Dúkan qaǵıydaları, smena tártibi, wazıypalar hám jámáát haqqındaǵı sorawlarǵa túsiniwli, doslarsha hám ápiwayı tilde juwap beriw.
+      1. Xızmetkerdi Real Education komandasına qabıllanǵanı menen qızǵın qutlıqlaw hám onıń sorawlarına juwap beriw.
+      2. Oray qaǵıydaları, sabaq/jumıs keste tártibi, wazıypalar hám jámáát haqqındaǵı sorawlarǵa túsiniwli, doslarsha hám ápiwayı tilde juwap beriw.
       3. Tek Qaraqalpaq tilinde sóyles (yamasa xızmetker basqa tilde jazsa, sol tilge maslas).
       4. Hár bir xabarıń qısqa hám anıq bolsın. Kóp qatar jazba.
       5. Eger xızmetker barlıǵın túsingenin aytsa, oǵan áwmet tile hám sáwbetti juwmaqla.

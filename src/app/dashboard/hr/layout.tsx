@@ -37,7 +37,7 @@ export default function HRDashboardLayout({ children }: { children: React.ReactN
         ${isMobileMenuOpen ? "flex translate-x-0" : "hidden md:flex -translate-x-full md:translate-x-0"}
       `}>
         <div className="hidden md:block mb-8 mt-4 px-4">
-          <h1 className="font-bold text-2xl text-primary">DIYAR MARKET</h1>
+          <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl overflow-hidden bg-yellow-400 p-0.5 border border-primary/40 shrink-0"><img src="/real-logo.jpg" alt="Real HR" className="w-full h-full object-cover rounded-lg" /></div><h1 className="font-black text-xl text-primary leading-tight">REAL HR</h1></div>
           <p className="text-xs text-slate-400">HR Basqarıw Sisteması</p>
         </div>
 

@@ -211,7 +211,7 @@ export default function ApplicationPage() {
                <div className="flex flex-col gap-4">
                  <p className="text-sm text-slate-400 mb-2">Ózińiz jaqsı biletugın kónlikpelerdi tańlań (*):</p>
                  <div className="flex flex-wrap gap-2">
-                    {["Kassa", "Mijazlar menen islesiw", "Esap-kitap", "Dúkan tazalıǵı", "Tildi biliw", "1C", "Buxgalteriya", "SMM", "Slesar", "Qoymashı", "Merchandising"].map(skill => {
+                    {["Pedagogika & Oqıtıw", "Mijazlar menen islesiw", "Inglis tili", "Rus tili", "IT & Dástúrlew", "Matematika", "SMM & Marketing", "Administratorlıq", "Prezentaciya", "Psixologiya", "Kompyuter sawatlılıǵı"].map(skill => {
                       const isSelected = formData.skills.includes(skill);
                       return (
                         <div 
@@ -219,7 +219,7 @@ export default function ApplicationPage() {
                           onClick={() => toggleSkill(skill)}
                           className={`px-4 py-2 rounded-full cursor-pointer transition-all duration-300 border flex items-center gap-1 ${
                             isSelected 
-                              ? "bg-primary text-white border-primary shadow-lg shadow-primary/30" 
+                              ? "bg-primary text-black font-bold border-primary shadow-lg shadow-yellow-500/30" 
                               : "glass hover:bg-white/10 border-white/10"
                           }`}
                         >
@@ -244,11 +244,11 @@ export default function ApplicationPage() {
                  <div 
                    onClick={() => fileInputRef.current?.click()}
                    className={`border-2 border-dashed rounded-3xl p-8 flex flex-col items-center justify-center text-center gap-3 cursor-pointer transition-all ${
-                     formData.resumeUrl ? "border-green-500/50 bg-green-500/10" : "border-white/20 hover:bg-white/5"
+                     formData.resumeUrl ? "border-amber-400/50 bg-amber-400/10" : "border-white/20 hover:bg-white/5"
                    }`}
                  >
-                    <div className={`w-14 h-14 rounded-full flex items-center justify-center mb-2 ${formData.resumeUrl ? 'bg-green-500/20' : 'bg-primary/20'}`}>
-                      {formData.resumeUrl ? <Check size={28} className="text-green-500" /> : <Upload size={28} className="text-primary" />}
+                    <div className={`w-14 h-14 rounded-full flex items-center justify-center mb-2 ${formData.resumeUrl ? 'bg-amber-400/20' : 'bg-primary/20'}`}>
+                      {formData.resumeUrl ? <Check size={28} className="text-amber-400" /> : <Upload size={28} className="text-primary" />}
                     </div>
                     <h3 className="font-bold">{formData.resumeUrl ? "CV Júklendi!" : "CV / Reyume júkleń"}</h3>
                     <p className="text-sm text-slate-400">{formData.resumeUrl || "PDF yamasa DOCX formatında (Max 5MB)"}</p>
@@ -269,7 +269,7 @@ export default function ApplicationPage() {
                  </div>
                  <h2 className="text-2xl font-bold mb-4">AI Intervyuga tayarsızba?</h2>
                  <p className="text-slate-400 mb-8">
-                   Bizdiń AI asistentimiz sizden vakansiyaga sáykes 15-30 soraw soraydi hám bilimingizdi bahalaydi.
+                   Bizdiń AI asistentimiz sizden vakansiyaga sáykes sorawlar soraydi hám bilimingizdi bahalaydi.
                  </p>
                </div>
             )}
@@ -281,7 +281,7 @@ export default function ApplicationPage() {
       <div className="fixed bottom-6 left-0 right-0 px-4 flex justify-center w-full max-w-md mx-auto">
         <button 
           onClick={currentStep === steps.length ? handleStartInterview : nextStep}
-          className="w-full bg-primary hover:bg-green-700 text-white shadow-xl shadow-green-500/20 py-4 rounded-2xl font-bold text-lg transition-all active:scale-95 flex justify-center items-center gap-2"
+          className="w-full bg-primary hover:bg-yellow-400 text-black shadow-xl shadow-yellow-500/20 py-4 rounded-2xl font-bold text-lg transition-all active:scale-95 flex justify-center items-center gap-2"
         >
           {currentStep === steps.length ? "Intervyunı baslaw" : "Kelesi"}
           {currentStep !== steps.length && <ChevronRight size={20} />}

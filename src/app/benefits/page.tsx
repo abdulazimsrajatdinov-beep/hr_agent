@@ -5,12 +5,12 @@ import { ChevronLeft, TrendingUp, Book, HeartHandshake, Coffee, Laptop, Gift } f
 import Link from "next/link";
 
 const benefits = [
-  { icon: TrendingUp, title: "Karyeralıq ósiw", desc: "Satıwshı yamasa kassirlikten filial baslıǵı lawazımına shekem ósiw imkaniyatı", color: "text-blue-500" },
-  { icon: Book, title: "Biypul oqıtıw", desc: "Jańa xızmetkerler ushın kásipke úyretiw hám stajirovka", color: "text-purple-500" },
-  { icon: HeartHandshake, title: "Doslarsha komanda", desc: "Birge rawajlanatuǵın hám hár dayım járdem beretuǵın jámáát", color: "text-green-500" },
-  { icon: Coffee, title: "Qolaylı sharayat", desc: "Taza, zamanagóy dúkan hám túslik awqatlanıw qolaylıqları", color: "text-orange-500" },
-  { icon: Laptop, title: "Rásmiy jumıs", desc: "waqtında tólenetuǵın aylıq hám turaqlı jumıs ornı", color: "text-pink-500" },
-  { icon: Gift, title: "Bonuslar hám jeńillikler", desc: "Jaqsı nátiyjeler hám bayramlar ushın hár aylıq qosımsha bonuslar", color: "text-yellow-500" },
+  { icon: TrendingUp, title: "Karyeralıq ósiw", desc: "Oqıtıwshılıqtan filial yamasa baǵdar baslıǵı lawazımına shekem tez ósiw imkaniyatı", color: "text-amber-400" },
+  { icon: Book, title: "Úzliksiz rawajlanıw", desc: "Mentorlıq dástúrleri, zamanagóy pedagogika hám metodikalıq biypul treningler", color: "text-purple-400" },
+  { icon: HeartHandshake, title: "Doslarsha komanda", desc: "Zamanagóy, intellektual hám bir-birin qollap-quwatlaytuǵın kúshli jámáát", color: "text-emerald-400" },
+  { icon: Coffee, title: "Qolaylı sharayat", desc: "Zamanagóy oqıw xanaları, innovaciyalıq texnika hám shiyrin kofe-breyk zonaları", color: "text-orange-400" },
+  { icon: Laptop, title: "Rásmiy jumıs", desc: "Waqtında tólenetuǵın bekkem aylıq, sociallıq paket hám rásmiy miynet shártnaması", color: "text-blue-400" },
+  { icon: Gift, title: "Bonuslar hám motivaciya", desc: "Nátijeli gruppalar, studentler jeńisleri hám KPI boyınsha úlken qosımsha bonuslar", color: "text-yellow-400" },
 ];
 
 export default function BenefitsPage() {

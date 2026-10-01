@@ -1,6 +1,6 @@
 async function testProd() {
   try {
-    const res = await fetch("https://texnopos-hr-ai.vercel.app/api/chat", {
+    const res = await fetch("https://real-hr-ai.vercel.app/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

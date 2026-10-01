@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 export default function AIInterviewPage() {
   const router = useRouter();
   const [messages, setMessages] = useState([
-    { id: 1, sender: "ai", text: "Sálem! Men Diyar Market tiń AI HR asistentimen. Intervyunı baslawǵa tayarsız ba?" }
+    { id: 1, sender: "ai", text: "Sálem! Men Real HR dıń AI asistentimen. Intervyunı baslawǵa tayarsız ba?" }
   ]);
   const [input, setInput] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -109,7 +109,7 @@ export default function AIInterviewPage() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               className={`flex flex-col max-w-[85%] ${msg.sender === "user" ? "self-end items-end" : "self-start items-start"}`}
             >
-              <div className={`p-4 rounded-2xl ${msg.sender === "user" ? "bg-primary text-white rounded-tr-sm" : "glass rounded-tl-sm text-slate-200"}`}>
+              <div className={`p-4 rounded-2xl ${msg.sender === "user" ? "bg-primary text-black font-semibold rounded-tr-sm" : "glass rounded-tl-sm text-slate-200"}`}>
                 <p className="text-sm leading-relaxed">{msg.text}</p>
               </div>
               <span className="text-[10px] text-slate-500 mt-1">Házir</span>
@@ -135,9 +135,9 @@ export default function AIInterviewPage() {
           />
           <button 
             onClick={handleSend}
-            className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0 hover:scale-105 transition active:scale-95 shadow-lg shadow-primary/20"
+            className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0 hover:scale-105 transition active:scale-95 shadow-lg shadow-yellow-500/20"
           >
-            <Send size={18} className="text-white ml-1" />
+            <Send size={18} className="text-black ml-1" />
           </button>
         </div>
       </div>

@@ -32,7 +32,7 @@ export default function OnboardingPage() {
          setCandidate(data);
          if (data && data.status === "Qabıllandı") {
            setMessages([
-             { sender: "ai", text: `Sálem, ${data.fullName}! Diyar Market komandasına xosh keldińiz! 🎉 Men sizdiń shaxsi Onboarding (Adaptaciya) asistentinizben. Jumıs, wazıypalar yamasa komanda haqqında qálegen sorawıńızdı bere beriń!` }
+             { sender: "ai", text: `Sálem, ${data.fullName}! Real Education komandasına xosh keldińiz! 🎉 Men sizdiń shaxsi Onboarding (Adaptaciya) asistentinizben. Jumıs, wazıypalar yamasa komanda haqqında qálegen sorawıńızdı bere beriń!` }
            ]);
          }
        })
@@ -87,7 +87,7 @@ export default function OnboardingPage() {
       {/* Sidebar */}
       <aside className="w-full md:w-80 glass border-r border-white/10 flex flex-col p-6 sticky top-0 md:h-screen z-10">
         <div className="mb-10">
-          <h1 className="text-2xl font-bold text-primary mb-1">DIYAR MARKET</h1>
+          <div className="flex items-center gap-3 mb-1"><div className="w-10 h-10 rounded-xl overflow-hidden bg-yellow-400 p-0.5 border border-primary/40 shrink-0"><img src="/real-logo.jpg" alt="Real HR" className="w-full h-full object-cover rounded-lg" /></div><h1 className="text-2xl font-black text-primary">REAL HR</h1></div>
           <p className="text-sm text-slate-400">Onboarding Portal</p>
         </div>
 

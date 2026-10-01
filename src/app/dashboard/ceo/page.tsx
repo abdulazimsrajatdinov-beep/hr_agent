@@ -88,9 +88,9 @@ export default function CEODashboard() {
                  <XAxis dataKey="name" stroke="#94a3b8" fontSize={12} />
                  <YAxis stroke="#94a3b8" fontSize={12} />
                  <RechartsTooltip
-                   contentStyle={{ backgroundColor: "#06402B", borderColor: "rgba(255,255,255,0.1)", borderRadius: "12px", color: "#fff" }}
+                   contentStyle={{ backgroundColor: "#18181b", borderColor: "rgba(255,255,255,0.1)", borderRadius: "12px", color: "#fff" }}
                  />
-                 <Line type="monotone" dataKey="arzalar" stroke="#10b981" strokeWidth={3} dot={{ r: 4 }} />
+                 <Line type="monotone" dataKey="arzalar" stroke="#FFCE00" strokeWidth={3} dot={{ r: 4 }} />
                  <Line type="monotone" dataKey="kesh" stroke="#60a5fa" strokeWidth={2} dot={{ r: 3 }} />
                </LineChart>
              </ResponsiveContainer>
